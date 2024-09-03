@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/c148521509.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    >
+      <a
+        href="/"
+        class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+      >
+        <img
+          src="../assets/img/logo.png"
+          class="bi me-2"
+          width="50"
+          height="50"
+          role="img"
+          aria-label="logo"
+        />
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a href="#" class="nav-link px-2 link-dark fw-bold">Trang chủ</a>
+        </li>
+        <li><a href="#" class="nav-link px-2 link-dark">Tài liệu</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Hoạt động</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Lịch sử</a></li>
+        <li><a href="#contact" class="nav-link px-2 link-dark">Liên hệ</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2">
+          <a href="./login.html" class="text-decoration-none">Login</a>
+        </button>
+      </div>
+    </header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#schedule">Lịch sinh hoạt</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#announcement__room1"
+                >Thông báo quản sinh</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#announcement__room2"
+                >Thông báo tài chính</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#announcement__room3"
+                >Nội dung kĩ thuật</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Khác
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Tìm kiếm"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- section -->
+    <div class="section__components container-fluid">
+      <div class="section__component">
+        <section id="schedule">
+          <div class="container d-flex flex-column">
+            <div
+              class="schedule__header d-flex justify-content-between align-items-center"
+            >
+              <h1>Lịch sinh hoạt</h1>
+              <a href="#">Xem tất cả lịch sinh hoạt</a>
+            </div>
+            <div class="row__schedule">
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/c4.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/c2.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="schedule__item">
+                <img
+                  src="../assets/img/test.jpg"
+                  alt="schedule"
+                  class="schedule__item__img"
+                />
+                <div class="schedule__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <div class="schedule__item__content__info d-flex flex-column">
+                    <span id="location">Quảng trường C4</span>
+                    <span id="date">2024/05/01</span>
+                    <span id="time">18:00-20:00</span>
+                  </div>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="announcement__room1">
+          <div class="container">
+            <div
+              class="announcement__room1__header d-flex justify-content-between align-items-center border-bottom"
+            >
+              <h1>Thông báo quản sinh</h1>
+              <a href="#">Xem tất cả thông báo quản sinh</a>
+            </div>
+            <div class="announcement__room1__content">
+              <div class="room1__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Thông báo tuyển sinh năm học mới</h3>
+                </a>
+                <p>Nội dung thông báo 1</p>
+              </div>
+              <div class="room1__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Thông báo danh sách thăng đai kì thi 9-2024</h3></a
+                >
+                <p>Nội dung thông báo 2</p>
+              </div>
+              <div class="room1__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Thông báo kỉ luật thành viên R000_XXX</h3>
+                </a>
+                <p>Nội dung thông báo 3</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="announcement__room2">
+          <div class="container">
+            <h1>Thông báo tài chính</h1>
+            <div class="room2__content">
+              <div class="room2__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Các khoản thu chi tháng 9</h3>
+                </a>
+                <p>Nội dung thông báo 1</p>
+              </div>
+              <div class="room2__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Mua mới cơ sở vật chất</h3>
+                </a>
+                <p>Nội dung thông báo 2</p>
+              </div>
+              <div class="room2__content--item border-bottom">
+                <a href="#" class="text-decoration-none">
+                  <h3>Kỉ luật thành viên đóng quỹ muộn</h3>
+                </a>
+                <p>Nội dung thông báo 3</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="announcement__room3">
+          <div class="container d-flex flex-column">
+            <div
+              class="schedule__header d-flex justify-content-between align-items-center"
+            >
+              <h1>Nội dung kĩ thuật</h1>
+              <a href="#">Xem tất cả nội dung kĩ thuật</a>
+            </div>
+            <div class="row__technical">
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source
+                    src="../assets/video/moctruoc_sau.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="technical__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/vvt.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="technical__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/kepcodon.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="technical__item__content">
+                  <h3>Lịch sinh hoạt 1</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/kepcodon.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="technical__item__content">
+                  <h3>36 tuyệt kĩ thiếu lâm thức thứ nhất</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source
+                    src="../assets/video/moctruoc_sau.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="technical__item__content">
+                  <h4>Kỹ thuật móc trước sau</h4>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/vvt.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="schedule__item__content">
+                  <h3>36 tuyệt kĩ thiếu lâm thức thứ nhất</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/vvt.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="schedule__item__content">
+                  <h3>36 tuyệt kĩ thiếu lâm thức thứ nhất</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="technical__item">
+                <video class="technical__item__img" controls>
+                  <source src="../assets/video/vvt.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <div class="schedule__item__content">
+                  <h3>36 tuyệt kĩ thiếu lâm thức thứ nhất</h3>
+                  <a href="#">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="right__component">
+        <div class="lastest__news">
+          <div class="lastest__news__content">
+            <h3>Tin mới nhất</h3>
+            <ul>
+              <li><a href="#">Thông báo kì thi thăng đai 9-2024</a></li>
+              <li><a href="#">Quyết định bổ nhiệm trưởng phòng mới</a></li>
+              <li>
+                <a href="#">Tiến hành kỉ luật đối với môn sinh R000_XXX</a>
+              </li>
+              <li>
+                <a href="#"
+                  >Biên thái xuất hiện ở khu vực ... các môn sinh lưu ý</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Đến ngày 10/05/2024 sẽ có đội ngũ cán bộ phục vụ tại các khu
+                  vực</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="recent__activity">
+          <h3>Hoạt động gần đây</h3>
+          <ul>
+            <li><a href="#">Tham gia giải chạy ICTU</a></li>
+            <li><a href="#">Sinh nhật 9 năm SDMAS</a></li>
+            <li><a href="#">Tổng kết năm học 2023-2024</a></li>
+            <li>
+              <a href="#">Biểu diễn võ thuật tại trường Đại học Công nghiệp</a>
+            </li>
+            <li><a href="#">Giao lưu với teakwondo Ngoại Ngữ</a></li>
+          </ul>
+        </div>
+        <div class="sdmas__moment">
+          <h3>Một vài khoảnh khắc SDMAS</h3>
+          <div class="sdmas__moment__content">
+            <div class="moment__item">
+              <img
+                src="../assets/img/buoitap.jpg"
+                alt="SDMAS moment"
+                class="img-fluid"
+              />
+            </div>
+            <div class="moment__item">
+              <img
+                src="../assets/img/cntaodang.jpg"
+                alt="SDMAS moment"
+                class="img-fluid"
+              />
+            </div>
+            <div class="moment__item">
+              <img
+                src="../assets/img/tinhdongchi.jpg"
+                alt="SDMAS moment"
+                class="img-fluid"
+              />
+            </div>
+            <div class="moment__item">
+              <img
+                src="../assets/img/thamgiagiaichay.jpg"
+                alt="SDMAS moment"
+                class="img-fluid"
+              />
+            </div>
+            <div class="moment__item">
+              <img
+                src="../assets/img/c4.jpg"
+                alt="SDMAS moment"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="advertisement__area">
+          <h3>Khu vực quảng cáo</h3>
+          <div class="advertisement__area__content">
+            <div class="ad__content">
+              <p>
+                Bạn muốn học tiếng anh mà không biết bắt đầu từ đâu? Khó khăn
+                khi nói, không phục vụ được công việc?
+              </p>
+              <p>
+                Đến với lớp tiếng anh thầy Phong, đảm bảo chuẩn đầu ra, chuẩn
+                giao tiếp. Giáo viên thân thiện, có chuyên môn lâu năm trong
+                công cuộc giảng dạy tiếng anh
+              </p>
+              <span><strong>Chi tiết liên hệ: 034324***</strong></span>
+            </div>
+            <div class="ad__content">
+              <p>
+                Bạn muốn học tiếng Việt mà không biết bắt đầu từ đâu? Khó khăn
+                khi nói, không phục vụ được công việc?
+              </p>
+              <p>
+                Đến với lớp tiếng anh thầy Phong, đảm bảo chuẩn đầu ra, chuẩn
+                giao tiếp. Giáo viên thân thiện, có chuyên môn lâu năm trong
+                công cuộc giảng dạy tiếng anh
+              </p>
+              <span><strong>Chi tiết liên hệ: 034324***</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-dark py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column: Logo and Description -->
+          <div class="col-md-3">
+            <img
+              src="../assets/img/logo.png"
+              alt="Martial Arts Logo"
+              class="my-3 rounded-circle"
+            />
+            <p>
+              SDMAS là viết tắt của Self-Defense Martial Arts System. Bộ môn Võ
+              thuật tự vệ SDMAS được thành lập năm 2015, hoạt động dựa trên
+              phương châm lưu giữ và truyền hóa những tinh hoa võ thuật, tình
+              thần đấu tranh quật cường của bao thế hệ người dân việt nam đấu
+              tranh bảo vệ và giữ nước, đề cao các giá trị nhân văn từ ngàn xưa
+              và tinh thần võ đạo dân tộc
+            </p>
+            <a href="#" class="btn btn-outline-light btn-sm">Learn More</a>
+            <div class="mt-3 d-flex justify-content-evenly">
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light me-2"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Middle Column: Latest News -->
+          <div class="col-md-3">
+            <h5 class="mb-4">Tin mới nhất</h5>
+            <div class="lastest__news mb-2">
+              <img
+                src="../assets/img/c4.jpg"
+                alt="News Image"
+                class="img-fluid mb-2"
+              />
+              <div class="lastest__news__content">
+                <p class="mb-1"><a href="#">Women's Self Defense Class</a></p>
+                <small>April 9, 2018</small>
+              </div>
+            </div>
+            <div class="lastest__news mb-2">
+              <img
+                src="../assets/img/c4.jpg"
+                alt="News Image"
+                class="img-fluid mb-2"
+              />
+              <div class="lastest__news__content">
+                <p class="mb-1"><a href="#">Pepper Spray Training Class</a></p>
+                <small>April 9, 2018</small>
+              </div>
+            </div>
+            <div class="lastest__news mb-2">
+              <img
+                src="../assets/img/c2.jpg"
+                alt="News Image"
+                class="img-fluid mb-2"
+              />
+              <div class="lastest__news__content">
+                <p class="mb-1">
+                  <a href="#">National Tournament Pro Event 2019</a>
+                </p>
+                <small>February 2, 2019</small>
+              </div>
+            </div>
+            <div class="lastest__news">
+              <img
+                src="../assets/img/c4.jpg"
+                alt="News Image"
+                class="img-fluid mb-2"
+              />
+              <div class="lastest__news__content">
+                <p class="mb-1">
+                  <a href="#">May Word of the Month - Character</a>
+                </p>
+                <small>April 9, 2018</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Column: Quick Links -->
+          <div class="col-md-3">
+            <div class="col-md-9">
+              <h5 class="mb-4">Truy cập nhanh</h5>
+              <ul class="quick__links list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-9">
+              <h5 class="mb-4">Muốn nhận thông tin mới nhất?</h5>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Opening Hours -->
+          <div class="col-md-2">
+            <h5 class="mb-4">Lịch sinh hoạt</h5>
+            <ul class="list-unstyled">
+              <li class="px-8">
+                Monday <span class="float-end">18.00 - 20.00</span>
+              </li>
+              <li class="px-8">
+                Tuesday <span class="float-end">18.00 - 20.00</span>
+              </li>
+              <li class="px-8">
+                Wednesday - Thursday
+                <span class="float-end">18.00 - 20.00</span>
+              </li>
+              <li class="px-8">
+                Friday <span class="float-end">18.00 - 20.00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-light text-center py-3">
+        <p>Copyright © 2024 SDMAS. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar">
+          <div class="sidebar-sticky">
+            <a href="admin.html"
+              ><img src="../assets/img/SDMAS.png" alt="logo"
+            /></a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="quan-ly-thanh-vien"
+                  >Quản lý thành viên</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="quan-ly-tai-chinh"
+                  >Quản lý tài chính</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-target="quan-ly-co-so-vat-chat"
+                  >Quản lý cơ sở vật chất</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="quan-ly-thong-bao"
+                  >Quản lý thông báo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-target="quan-ly-lich-sinh-hoat"
+                  >Quản lý lịch sinh hoạt</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="hom-thu-gop-y"
+                  >Hòm thư góp ý</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="phan-quyen"
+                  >Phân quyền</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-footer">
+            Xin chào <span>Grand Admin</span
+            ><a href="./login.html" class=""> Đăng xuất</a>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div id="welcome" class="welcome-message active">
+            <h1>Welcome</h1>
+          </div>
+          <!-- Nội dung CRUD hiển thị ở đây -->
+          <div id="quan-ly-thanh-vien" class="tab-content">
+            <h2>Quản lý thành viên</h2>
+            <form id="add-member-form">
+              <div class="form-group">
+                <div class="form-group-item">
+                  <label for="member_id">Mã thành viên:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="member_id"
+                    name="member_id"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="name">Tên thành viên:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="phone">Số điện thoại:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="address">Địa chỉ:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="role">Vai trò:</label>
+                  <select class="form-control" id="role" name="role">
+                    <option value="AdminP1">AdminP1</option>
+                    <option value="AdminP2">AdminP2</option>
+                    <option value="AdminP3">AdminP3</option>
+                    <option value="Coach">Coach</option>
+                    <option value="Thành viên">Thành viên</option>
+                    <option value="Khách">Khách</option>
+                  </select>
+                </div>
+                <div class="form-group-item">
+                  <label for="status">Trạng thái:</label>
+                  <select class="form-control" id="status" name="status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="inactive">Locked</option>
+                  </select>
+                </div>
+                <div class="form-group-item">
+                  <label for="image">Hình ảnh:</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    name="image"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Thêm thành viên
+                </button>
+              </div>
+            </form>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Mã thành viên</th>
+                  <th>Tên thành viên</th>
+                  <th>Số điện thoại</th>
+                  <th>Email</th>
+                  <th>Địa chỉ</th>
+                  <th>Vai trò</th>
+                  <th>Trạng thái</th>
+                  <th>Hình ảnh</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody id="member-list">
+                <tr>
+                  <td>R000_135</td>
+                  <td>Nguyễn Mạnh Cường</td>
+                  <td>0987654321</td>
+                  <td>nguyenmanhcuong@gmail.com</td>
+                  <td>Thái Nguyên</td>
+                  <td>Thành viên</td>
+                  <td>inactive</td>
+                  <td>
+                    <img
+                      src="../assets/img/avatar.png"
+                      alt="Hình ảnh thành viên"
+                      width="50"
+                      height="50"
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-primary">Sửa</button>
+                    <hr />
+                    <button class="btn btn-danger">Xóa</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <ul id="member-list" class="list-group mt-3"></ul> -->
+          </div>
+
+          <div id="quan-ly-tai-chinh" class="tab-content">
+            <h2>Quản lý tài chính</h2>
+            <!-- Thêm form và bảng quản lý tài chính -->
+            <form id="add-finance-form">
+              <div class="form-group">
+                <div class="form-group-item">
+                  <label for="finance_id">Mã tài chính:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="finance_id"
+                    name="finance_id"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_name">Tên tài chính:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="finance_name"
+                    name="finance_name"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_type">Loại tài chính:</label>
+                  <select
+                    class="form-control"
+                    id="finance_type"
+                    name="finance_type"
+                  >
+                    <option value="income">Thu nhập</option>
+                    <option value="expense">Chi tiêu</option>
+                  </select>
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_amount">Số tiền:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="finance_amount"
+                    name="finance_amount"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_date">Ngày:</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="finance_date"
+                    name="finance_date"
+                    required
+                  />
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_description">Mô tả:</label>
+                  <textarea
+                    class="form-control"
+                    id="finance_description"
+                    name="finance_description"
+                  ></textarea>
+                </div>
+                <div class="form-group-item">
+                  <label for="finance_image">Hình ảnh:</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="finance_image"
+                    name="finance_image"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Thêm tài chính
+                </button>
+              </div>
+            </form>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Mã tài chính</th>
+                  <th>Tên tài chính</th>
+                  <th>Loại tài chính</th>
+                  <th>Số tiền</th>
+                  <th>Ngày</th>
+                  <th>Mô tả</th>
+                  <th>Hình ảnh</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody id="finance-list">
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>
+                    <button class="btn btn-primary">Sửa</button>
+                    <button class="btn btn-danger">Xóa</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="quan-ly-co-so-vat-chat" class="tab-content">
+            <h2>Quản lý cơ sở vật chất</h2>
+            <!-- Thêm form và bảng quản lý cơ sở vật chất -->
+          </div>
+          <div id="quan-ly-thong-bao" class="tab-content">
+            <h2>Quản lý thông báo</h2>
+            <!-- Thêm form và bảng quản lý thông báo -->
+          </div>
+          <div id="quan-ly-lich-sinh-hoat" class="tab-content">
+            <h2>Quản lý lịch sinh hoạt</h2>
+            <!-- Thêm form và bảng quản lý lịch sinh hoạt -->
+          </div>
+          <div id="hom-thu-gop-y" class="tab-content">
+            <h2>Hòm thư góp ý</h2>
+            <!-- Thêm form và bảng quản lý hòm thư góp ý -->
+          </div>
+          <div id="phan-quyen" class="tab-content">
+            <h2>Phân quyền</h2>
+            <!-- Thêm form và bảng quản lý phân quyền -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>
